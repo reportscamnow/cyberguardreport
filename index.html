@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyberguard ReportScamNow | Fight Against Online Fraud</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .gradient-bg {
+            background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%);
+        }
+        .report-btn {
+            background: linear-gradient(90deg, #ef4444 0%, #dc2626 100%);
+            transition: all 0.3s ease;
+        }
+        .report-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(220, 38, 38, 0.3);
+        }
+        .partner-badge {
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        .scam-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        .stats-counter {
+            transition: all 0.5s ease;
+        }
+    </style>
+</head>
+<body class="font-sans antialiased">
+    <!-- Navigation -->
+    <nav class="gradient-bg text-white shadow-lg">
+        <div class="container mx-auto px-6 py-3">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-4">
+                    <div class="flex items-center">
+                        <i class="fas fa-shield-alt text-2xl mr-2"></i>
+                        <span class="font-bold text-xl">Cyberguard <span class="text-red-400">ReportScamNow</span></span>
+                    </div>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="hover:text-red-300 transition">Home</a>
+                    <a href="#about" class="hover:text-red-300 transition">About</a>
+                    <a href="#services" class="hover:text-red-300 transition">Services</a>
+                    <a href="#report" class="hover:text-red-300 transition">Report Scam</a>
+                    <a href="#partners" class="hover:text-red-300 transition">Partners</a>
+                </div>
+                <div class="md:hidden">
+                    <button class="mobile-menu-button p-2 focus:outline-none">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div class="mobile-menu hidden md:hidden gradient-bg pb-4 px-6">
+            <a href="#home" class="block py-2 hover:text-red-300 transition">Home</a>
+            <a href="#about" class="block py-2 hover:text-red-300 transition">About</a>
+            <a href="#services" class="block py-2 hover:text-red-300 transition">Services</a>
+            <a href="#report" class="block py-2 hover:text-red-300 transition">Report Scam</a>
+            <a href="#partners" class="block py-2 hover:text-red-300 transition">Partners</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="gradient-bg text-white py-20">
+        <div class="container mx-auto px-6 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-10 md:mb-0">
+                <h1 class="text-4xl md:text-5xl font-bold leading-tight mb-6">Fight Against Online Fraud & Scams</h1>
+                <p class="text-xl mb-8">We track down scammers, expose catfish, and help victims recover from fraud. Your report makes the internet safer for everyone.</p>
+                <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                    <a href="#report" class="report-btn text-white font-bold py-3 px-8 rounded-full text-center">Report a Scam Now</a>
+                    <a href="#about" class="bg-white text-blue-900 font-bold py-3 px-8 rounded-full text-center">Learn More</a>
+                </div>
+            </div>
+            <div class="md:w-1/2 flex justify-center">
+                <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Cybersecurity" class="rounded-lg shadow-2xl max-w-md w-full">
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="bg-gray-100 py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                <div class="bg-white p-8 rounded-xl shadow-md stats-counter">
+                    <div class="text-5xl font-bold text-blue-900 mb-2" id="scamsReported">0</div>
+                    <div class="text-gray-600">Scams Reported</div>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-md stats-counter">
+                    <div class="text-5xl font-bold text-blue-900 mb-2" id="scammersExposed">0</div>
+                    <div class="text-gray-600">Scammers Exposed</div>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-md stats-counter">
+                    <div class="text-5xl font-bold text-blue-900 mb-2" id="moneyRecovered">0</div>
+                    <div class="text-gray-600">Dollars Recovered</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">About Cyberguard ReportScamNow</h2>
+                <div class="w-20 h-1 bg-red-500 mx-auto"></div>
+            </div>
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0">
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="About Us" class="rounded-lg shadow-xl w-full">
+                </div>
+                <div class="md:w-1/2 md:pl-12">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">Our Mission</h3>
+                    <p class="text-gray-600 mb-6">Cyberguard ReportScamNow is a dedicated platform committed to tracking down online scammers, exposing catfish operations, and fighting all forms of digital fraud. We provide victims with a voice and work tirelessly to make the internet a safer place.</p>
+                    
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">How We Help</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <div class="bg-blue-100 p-2 rounded-full mr-4">
+                                <i class="fas fa-search text-blue-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800">Scammer Identification</h4>
+                                <p class="text-gray-600">We use advanced techniques to identify and track scammers across multiple platforms.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-blue-100 p-2 rounded-full mr-4">
+                                <i class="fas fa-gavel text-blue-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800">Legal Support</h4>
+                                <p class="text-gray-600">We work with law enforcement agencies to bring scammers to justice.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-blue-100 p-2 rounded-full mr-4">
+                                <i class="fas fa-users text-blue-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800">Community Protection</h4>
+                                <p class="text-gray-600">We educate the public about common scams and how to avoid them.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Our Services</h2>
+                <div class="w-20 h-1 bg-red-500 mx-auto"></div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="bg-white p-8 rounded-xl shadow-md scam-card transition">
+                    <div class="text-blue-900 mb-4">
+                        <i class="fas fa-user-secret text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-4">Scammer Investigation</h3>
+                    <p class="text-gray-600 mb-6">We conduct thorough investigations to uncover the true identities of scammers and catfish operating online.</p>
+                    <a href="#report" class="text-blue-600 font-semibold hover:text-blue-800 transition">Learn More →</a>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="bg-white p-8 rounded-xl shadow-md scam-card transition">
+                    <div class="text-blue-900 mb-4">
+                        <i class="fas fa-file-alt text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-4">Scam Reporting</h3>
+                    <p class="text-gray-600 mb-6">Our secure platform allows victims to report scams which we then escalate to the appropriate authorities.</p>
+                    <a href="#report" class="text-blue-600 font-semibold hover:text-blue-800 transition">Learn More →</a>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="bg-white p-8 rounded-xl shadow-md scam-card transition">
+                    <div class="text-blue-900 mb-4">
+                        <i class="fas fa-chart-line text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-4">Fraud Analysis</h3>
+                    <p class="text-gray-600 mb-6">We analyze scam patterns to identify emerging threats and develop strategies to combat them.</p>
+                    <a href="#report" class="text-blue-600 font-semibold hover:text-blue-800 transition">Learn More →</a>
+                </div>
+                
+                <!-- Service 4 -->
+                <div class="bg-white p-8 rounded-xl shadow-md scam-card transition">
+                    <div class="text-blue-900 mb-4">
+                        <i class="fas fa-balance-scale text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-4">Legal Coordination</h3>
+                    <p class="text-gray-600 mb-6">We coordinate with law enforcement agencies worldwide to ensure scammers face legal consequences.</p>
+                    <a href="#report" class="text-blue-600 font-semibold hover:text-blue-800 transition">Learn More →</a>
+                </div>
+                
+                <!-- Service 5 -->
+                <div class="bg-white p-8 rounded-xl shadow-md scam-card transition">
+                    <div class="text-blue-900 mb-4">
+                        <i class="fas fa-shield-alt text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-4">Victim Support</h3>
+                    <p class="text-gray-600 mb-6">We provide resources and support to help victims recover from financial and emotional damage.</p>
+                    <a href="#report" class="text-blue-600 font-semibold hover:text-blue-800 transition">Learn More →</a>
+                </div>
+                
+                <!-- Service 6 -->
+                <div class="bg-white p-8 rounded-xl shadow-md scam-card transition">
+                    <div class="text-blue-900 mb-4">
+                        <i class="fas fa-globe text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-4">Public Awareness</h3>
+                    <p class="text-gray-600 mb-6">We educate the public through workshops, articles, and alerts about current scam tactics.</p>
+                    <a href="#report" class="text-blue-600 font-semibold hover:text-blue-800 transition">Learn More →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Report Section -->
+    <section id="report" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Report a Scam</h2>
+                <div class="w-20 h-1 bg-red-500 mx-auto"></div>
+                <p class="text-gray-600 max-w-2xl mx-auto mt-4">Help us fight online fraud by reporting scams you've encountered. Your information will be kept confidential.</p>
+            </div>
+            <div class="max-w-3xl mx-auto bg-gray-50 rounded-xl shadow-md p-8">
+                <form id="scamReportForm" action="https://formspree.io/f/xzzgaorq" method="POST">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label for="name" class="block text-gray-700 font-medium mb-2">Your Name (Optional)</label>
+                            <input type="text" id="name" name="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-gray-700 font-medium mb-2">Your Email (Optional)</label>
+                            <input type="email" id="email" name="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        </div>
+                        <div class="md:col-span-2">
+                            <label for="scamType" class="block text-gray-700 font-medium mb-2">Type of Scam</label>
+                            <select id="scamType" name="scamType" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                <option value="">Select scam type</option>
+                                <option value="romance">Romance Scam/Catfish</option>
+                                <option value="investment">Investment Scam</option>
+                                <option value="phishing">Phishing Scam</option>
+                                <option value="tech-support">Tech Support Scam</option>
+                                <option value="lottery">Lottery/Sweepstakes Scam</option>
+                                <option value="job">Job Offer Scam</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="md:col-span-2">
+                            <label for="scammerInfo" class="block text-gray-700 font-medium mb-2">Scammer Information</label>
+                            <textarea id="scammerInfo" name="scammerInfo" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Provide as much detail as possible about the scammer (usernames, phone numbers, email addresses, social media profiles, etc.)"></textarea>
+                        </div>
+                        <div class="md:col-span-2">
+                            <label for="scamDetails" class="block text-gray-700 font-medium mb-2">Scam Details</label>
+                            <textarea id="scamDetails" name="scamDetails" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Describe what happened, including dates, amounts of money involved, and any other relevant details"></textarea>
+                        </div>
+                        <div class="md:col-span-2">
+                            <label for="evidence" class="block text-gray-700 font-medium mb-2">Evidence (Screenshots, Emails, etc.)</label>
+                            <input type="file" id="evidence" name="evidence" multiple class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                            <p class="text-sm text-gray-500 mt-1">You can upload multiple files (max 10MB total)</p>
+                        </div>
+                        <div class="md:col-span-2">
+                            <div class="flex items-start">
+                                <div class="flex items-center h-5">
+                                    <input id="consent" name="consent" type="checkbox" class="focus:ring-blue-500 h-4 w-4 text-blue-600 border-gray-300 rounded" required>
+                                </div>
+                                <div class="ml-3 text-sm">
+                                    <label for="consent" class="font-medium text-gray-700">I understand that this information will be shared with law enforcement partners and used to investigate scams.</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-8">
+                        <button type="submit" class="report-btn text-white font-bold py-3 px-8 rounded-full w-full md:w-auto">Submit Report</button>
+                    </div>
+                </form>
+                <div id="formSuccess" class="hidden mt-4 p-4 bg-green-100 text-green-700 rounded-lg">
+                    <i class="fas fa-check-circle mr-2"></i> Thank you for your report! We've received your information and will review it shortly.
+                </div>
+                <div id="formError" class="hidden mt-4 p-4 bg-red-100 text-red-700 rounded-lg">
+                    <i class="fas fa-exclamation-circle mr-2"></i> There was an error submitting your report. Please try again.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partners Section -->
+    <section id="partners" class="py-20 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Our Partners</h2>
+                <div class="w-20 h-1 bg-red-500 mx-auto"></div>
+                <p class="text-gray-600 max-w-2xl mx-auto mt-4">We work with law enforcement agencies and cybersecurity organizations worldwide to combat online fraud.</p>
+            </div>
+            <div class="flex flex-wrap justify-center items-center gap-8 md:gap-16">
+                <div class="partner-badge bg-white p-6 rounded-xl shadow-md flex items-center justify-center">
+                    <div class="text-center">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/FBI_Logo.svg/1200px-FBI_Logo.svg.png" alt="FBI" class="h-16 w-auto mx-auto mb-2 object-contain" style="max-width: 120px;">
+                        <span class="font-semibold text-gray-700">Federal Bureau of Investigation</span>
+                    </div>
+                </div>
+                <div class="partner-badge bg-white p-6 rounded-xl shadow-md flex items-center justify-center">
+                    <div class="text-center">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/IC3_logo.png/1200px-IC3_logo.png" alt="IC3" class="h-16 w-auto mx-auto mb-2 object-contain" style="max-width: 120px;">
+                        <span class="font-semibold text-gray-700">Internet Crime Complaint Center</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Success Stories</h2>
+                <div class="w-20 h-1 bg-red-500 mx-auto"></div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-gray-50 p-8 rounded-xl shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 mr-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-6">"After being scammed out of $15,000 in a romance scam, Cyberguard helped track down the perpetrator and provided evidence to the authorities. I can't thank them enough."</p>
+                    <div class="flex items-center">
+                        <div class="bg-blue-100 text-blue-800 rounded-full w-12 h-12 flex items-center justify-center font-bold mr-4">JS</div>
+                        <div>
+                            <h4 class="font-semibold text-gray-800">Jane S.</h4>
+                            <p class="text-gray-500">Victim Assistance</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="bg-gray-50 p-8 rounded-xl shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 mr-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-6">"As a small business owner, we nearly fell victim to a sophisticated phishing scam. Cyberguard's resources helped us identify the threat before any damage was done."</p>
+                    <div class="flex items-center">
+                        <div class="bg-blue-100 text-blue-800 rounded-full w-12 h-12 flex items-center justify-center font-bold mr-4">MR</div>
+                        <div>
+                            <h4 class="font-semibold text-gray-800">Michael R.</h4>
+                            <p class="text-gray-500">Business Protection</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="bg-gray-50 p-8 rounded-xl shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 mr-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-6">"The team at Cyberguard worked tirelessly to expose a catfish who was using my photos to scam people. Their partnership with law enforcement made all the difference."</p>
+                    <div class="flex items-center">
+                        <div class="bg-blue-100 text-blue-800 rounded-full w-12 h-12 flex items-center justify-center font-bold mr-4">AL</div>
+                        <div>
+                            <h4 class="font-semibold text-gray-800">Amanda L.</h4>
+                            <p class="text-gray-500">Identity Protection</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="gradient-bg text-white py-16">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">Ready to Fight Back Against Scammers?</h2>
+            <p class="text-xl mb-8 max-w-2xl mx-auto">Your report could help prevent others from becoming victims. Together, we can make the internet safer.</p>
+            <a href="#report" class="report-btn text-white font-bold py-3 px-8 rounded-full inline-block">Report a Scam Now</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-shield-alt text-2xl mr-2"></i>
+                        <span class="font-bold text-xl">Cyberguard <span class="text-red-400">ReportScamNow</span></span>
+                    </div>
+                    <p class="text-gray-400">Dedicated to tracking down scammers, exposing catfish, and fighting all forms of online fraud.</p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="text-gray-400 hover:text-white transition">Home</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-white transition">About Us</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-white transition">Services</a></li>
+                        <li><a href="#report" class="text-gray-400 hover:text-white transition">Report Scam</a></li>
+                        <li><a href="#partners" class="text-gray-400 hover:text-white transition">Partners</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Resources</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Scam Prevention Tips</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Common Scams</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Victim Support</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Blog</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">FAQ</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Contact</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope mr-2 text-gray-400"></i>
+                            <span class="text-gray-400">report@cyberguard.com</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone-alt mr-2 text-gray-400"></i>
+                            <span class="text-gray-400">1-800-SCAM-NOW</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-map-marker-alt mr-2 text-gray-400"></i>
+                            <span class="text-gray-400">Cybersecurity Plaza, Suite 404</span>
+                        </li>
+                    </ul>
+                    <div class="mt-4 flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-twitter text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-facebook text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-linkedin text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-instagram text-xl"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
+                <p>© 2023 Cyberguard ReportScamNow. All rights reserved.</p>
+                <div class="mt-4 text-sm">
+                    <a href="#" class="hover:text-white transition">Privacy Policy</a> | 
+                    <a href="#" class="hover:text-white transition">Terms of Service</a> | 
+                    <a href="#" class="hover:text-white transition">Legal</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.querySelector('.mobile-menu-button');
+        const mobileMenu = document.querySelector('.mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Counter animation
+        function animateCounters() {
+            const scamsReported = document.getElementById('scamsReported');
+            const scammersExposed = document.getElementById('scammersExposed');
+            const moneyRecovered = document.getElementById('moneyRecovered');
+
+            const animate = (element, start, end, duration) => {
+                let startTimestamp = null;
+                const step = (timestamp) => {
+                    if (!startTimestamp) startTimestamp = timestamp;
+                    const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+                    element.innerHTML = Math.floor(progress * (end - start) + start).toLocaleString();
+                    if (progress < 1) {
+                        window.requestAnimationFrame(step);
+                    }
+                };
+                window.requestAnimationFrame(step);
+            };
+
+            animate(scamsReported, 0, 12453, 2000);
+            animate(scammersExposed, 0, 8765, 2000);
+            animate(moneyRecovered, 0, 32500000, 2000);
+        }
+
+        // Form submission
+        const scamReportForm = document.getElementById('scamReportForm');
+        const formSuccess = document.getElementById('formSuccess');
+        const formError = document.getElementById('formError');
+
+        scamReportForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            const formData = new FormData(scamReportForm);
+            
+            try {
+                const response = await fetch(scamReportForm.action, {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                });
+                
+                if (response.ok) {
+                    scamReportForm.reset();
+                    formSuccess.classList.remove('hidden');
+                    formError.classList.add('hidden');
+                } else {
+                    throw new Error('Form submission failed');
+                }
+            } catch (error) {
+                formError.classList.remove('hidden');
+                formSuccess.classList.add('hidden');
+                console.error('Error:', error);
+            }
+        });
+
+        // Initialize counters when stats section comes into view
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateCounters();
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
+
+        const statsSection = document.querySelector('.stats-counter');
+        if (statsSection) {
+            observer.observe(statsSection);
+        }
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                }
+            });
+        });
+    </script>
+<p style="border-radius: 8px; text-align: center; font-size: 12px; color: #fff; margin-top: 16px;position: fixed; left: 8px; bottom: 8px; z-index: 10; background: rgba(0, 0, 0, 0.8); padding: 4px 8px;">Made with <img src="https://enzostvs-deepsite.hf.space/logo.svg" alt="DeepSite Logo" style="width: 16px; height: 16px; vertical-align: middle;display:inline-block;margin-right:3px;filter:brightness(0) invert(1);"><a href="https://enzostvs-deepsite.hf.space" style="color: #fff;text-decoration: underline;" target="_blank" >DeepSite</a> - 🧬 <a href="https://enzostvs-deepsite.hf.space?remix=ScamReport/cyberguardreportscamnow" style="color: #fff;text-decoration: underline;" target="_blank" >Remix</a></p></body>
+</html>
